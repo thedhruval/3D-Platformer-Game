@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c115r8mocvqq8"]
+
+[ext_resource type="PackedScene" uid="uid://b32440loh4ttm" path="res://block.tscn" id="1_3hls8"]
+[ext_resource type="PackedScene" uid="uid://bl2jo77v1uuib" path="res://blockhead.tscn" id="2_hbghi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ilcil"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ilcil"]
+size = Vector3(10, 0.5, 10)
+
+[node name="Level1" type="Node3D" unique_id=1235070490]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=66824526]
+transform = Transform3D(1, 0, 0, 0, 0.86602545, 0.5000001, 0, -0.5000001, 0.86602545, 0, 3, 5)
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=185226982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1529152687]
+mesh = SubResource("BoxMesh_ilcil")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=462016219]
+shape = SubResource("BoxShape3D_ilcil")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=882113882]
+transform = Transform3D(0.73560995, -0.57908803, 0.3514756, 0.1757461, 0.6642372, 0.72656894, -0.65421057, -0.4727009, 0.59039193, 3.716672, 4.8967314, 7.742689)
+shadow_enabled = true
+
+[node name="Blocks" type="Node3D" parent="." unique_id=963936980]
+
+[node name="Block1" parent="Blocks" unique_id=624767155 instance=ExtResource("1_3hls8")]
+transform = Transform3D(0.996506, 0.08352131, 0, -0.08352131, 0.996506, 0, 0, 0, 1, -0.39475977, 2.7815762, -1.8060474)
+
+[node name="Block2" parent="Blocks" unique_id=1976232081 instance=ExtResource("1_3hls8")]
+transform = Transform3D(0.8894563, 0.4570203, 0, -0.4570203, 0.8894563, 0, 0, 0, 1, 2.1397367, 3.3068185, -2.1081295)
+
+[node name="Block3" parent="Blocks" unique_id=1033273879 instance=ExtResource("1_3hls8")]
+transform = Transform3D(0.3238196, -0.8557956, 0.40342888, 0.8315693, 0.46081868, 0.31006247, -0.45125762, 0.23507474, 0.8608755, -1.873909, 2.7815762, -1.7252855)
+
+[node name="Block4" parent="Blocks" unique_id=1332191363 instance=ExtResource("1_3hls8")]
+transform = Transform3D(0.8291839, 0.5589758, 0, -0.5589758, 0.8291839, 0, 0, 0, 1, 1.0113692, 2.7815762, -1.0374718)
+
+[node name="Blockhead" parent="." unique_id=1419234880 instance=ExtResource("2_hbghi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4499998, 0)
