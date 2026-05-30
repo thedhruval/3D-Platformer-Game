@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b32440loh4ttm" path="res://block.tscn" id="1_3hls8"]
 [ext_resource type="PackedScene" uid="uid://bl2jo77v1uuib" path="res://blockhead.tscn" id="2_hbghi"]
+[ext_resource type="PackedScene" uid="uid://dbxs52if8rhw0" path="res://coin.tscn" id="3_hn12h"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ilcil"]
 size = Vector3(10, 0.5, 10)
@@ -44,3 +45,6 @@ transform = Transform3D(0.8291839, 0.5589758, 0, -0.5589758, 0.8291839, 0, 0, 0,
 
 [node name="Blockhead" parent="." unique_id=1419234880 instance=ExtResource("2_hbghi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4499998, 0)
+
+[node name="Coin" parent="." unique_id=2045946865 instance=ExtResource("3_hn12h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05693388, 0.43462014, 2.222539)
