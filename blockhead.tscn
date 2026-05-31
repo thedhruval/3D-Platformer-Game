@@ -4,7 +4,11 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yx57d"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uui26"]
+albedo_color = Color(0.225, 0.9, 0, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_uui26"]
+material = SubResource("StandardMaterial3D_uui26")
 
 [node name="Blockhead" type="CharacterBody3D" unique_id=1419234880]
 script = ExtResource("1_uui26")
