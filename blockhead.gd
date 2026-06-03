@@ -6,6 +6,7 @@ const JUMP_VELOCITY = 4.5
 
 
 func _physics_process(delta):
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -26,3 +27,6 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	
+	# Make the position of camera controller match my position
+	$Camera_Controller.position = lerp($Camera_Controller.position, position, 0.15)

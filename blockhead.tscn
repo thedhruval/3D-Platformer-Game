@@ -18,3 +18,13 @@ shape = SubResource("BoxShape3D_yx57d")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=524206438]
 mesh = SubResource("BoxMesh_uui26")
+
+[node name="Camera_Controller" type="Node3D" parent="." unique_id=1660587656]
+top_level = true
+
+[node name="Camera_Target" type="Node3D" parent="Camera_Controller" unique_id=2043406113]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 2, 4)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Controller/Camera_Target" unique_id=1233124969]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0)
+current = true
