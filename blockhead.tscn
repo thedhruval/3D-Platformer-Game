@@ -10,6 +10,8 @@ albedo_color = Color(0.225, 0.9, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_uui26"]
 material = SubResource("StandardMaterial3D_uui26")
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_uui26"]
+
 [node name="Blockhead" type="CharacterBody3D" unique_id=1419234880]
 script = ExtResource("1_uui26")
 
@@ -18,6 +20,10 @@ shape = SubResource("BoxShape3D_yx57d")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=524206438]
 mesh = SubResource("BoxMesh_uui26")
+
+[node name="Face" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1366595896]
+transform = Transform3D(0.699776, 0, 0, 0, -1.3216216e-09, 0.6785981, 0, -0.030235175, -2.9662464e-08, 0, 0.246813, -0.54575884)
+mesh = SubResource("CylinderMesh_uui26")
 
 [node name="Camera_Controller" type="Node3D" parent="." unique_id=1660587656]
 top_level = true
